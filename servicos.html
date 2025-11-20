@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça os serviços oferecidos pelo Pet Shop de Coxim, incluindo banho, tosa, veterinário e muito mais!">
+    <title>Serviços</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagem/icon1.jpeg">
+</head>
+<body class="cs">
+    <header>
+        <h1 class="services-title">Serviços do Pet Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="service-list">
+            <h2>Nossos Serviços</h2>
+            <ul>
+                <li>
+                    Banho e Tosa - R$ 50,00 
+                    <button class="add-to-cart" data-service="Banho e Tosa" data-price="50">Adicionar ao Carrinho</button>
+                </li>
+                <li>
+                    Serviços veterinários - R$ 80,00 
+                    <button class="add-to-cart" data-service="Serviços veterinários" data-price="80">Adicionar ao Carrinho</button>
+                </li>
+                <li>
+                    Exames de laboratório - R$ 100,00 
+                    <button class="add-to-cart" data-service="Exames de laboratório" data-price="100">Adicionar ao Carrinho</button>
+                </li>
+                <li>
+                    Táxi dog - R$ 30,00 
+                    <button class="add-to-cart" data-service="Táxi dog" data-price="30">Adicionar ao Carrinho</button>
+                </li>
+                <li>
+                    Delivery de produtos para seu bichinho - R$ 20,00 
+                    <button class="add-to-cart" data-service="Delivery" data-price="20">Adicionar ao Carrinho</button>
+                </li>
+                <li>
+                    Hospedagem - R$ 150,00 
+                    <button class="add-to-cart" data-service="Hospedagem" data-price="150">Adicionar ao Carrinho</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="cart">
+            <h3>Carrinho</h3>
+            <ul id="cart-items"></ul>
+            <p><strong>Total: R$ <span id="total">0</span></strong></p>
+            <button id="finalize-button">Finalizar Compra</button>
+        </div>
+
+        <a href="index.html" rel="noopener noreferrer">Para voltar ao início, clique aqui</a>
+    </main>
+    
+    <div class="footer">
+        <p>&copy; 2024 Pet Shop de Coxim. Todos os direitos reservados.</p>
+    </div>
+
+
+    <script>
+        
+// Array para armazenar itens do carrinho
+let cart = [];
+let total = 0;
+
+// Função para atualizar a exibição do carrinho
+function updateCart() {
+    const cartItemsList = document.getElementById('cart-items');
+    cartItemsList.innerHTML = '';
+    cart.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.service} - R$ ${item.price}`;
+        cartItemsList.appendChild(li);
+    });
+    document.getElementById('total').textContent = total.toFixed(2);
+}
+
+// Função para adicionar serviço ao carrinho
+document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', function() {
+        const service = this.getAttribute('data-service');
+        const price = parseFloat(this.getAttribute('data-price'));
+
+        cart.push({ service, price });
+        total += price;
+
+        updateCart();
+    });
+});
+
+// Função para finalizar a compra
+document.getElementById('finalize-button').addEventListener('click', function() {
+    const message = encodeURIComponent(`Olá, gostaria de contratar os seguintes serviços: \n${cart.map(item => `${item.service} - R$ ${item.price}`).join('\n')}\nTotal: R$ ${total.toFixed(2)}`);
+    const whatsappURL = `https://api.whatsapp.com/send?text=${message}`;
+    window.open(whatsappURL);
+});
+
+    </script>
+</body>
+</html>

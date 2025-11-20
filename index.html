@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Pet - Seu PetShop Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="titulo">MUNDO PET</h1>
+        <h3 class="sub-titulo">O seu PetShop Digital.</h3>
+        <div class="edit-cabecalho">
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="sessao-inicio">
+            <h2 class="titulo-secao">Bem-vindo ao Mundo Pet!</h2>
+            <p class="descricao-secao">Seu PetShop Digital de confiança, oferecendo os melhores produtos e serviços para o seu melhor amigo.</p>
+            <a href="#produtos" class="botao">Ver Produtos</a>
+        </section>
+
+        <section id="produtos" class="sessao-produtos">
+            <h2 class="titulo-secao">Nossos Produtos</h2>
+            <div class="lista-produtos">
+                <div class="produto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI2yWV6Otwcf9GdK1h9SnkoLuGY1sEVL8HUQ&s" alt="Racao-Premium">
+                    <h3 class="nome-produto">Ração Premium</h3>
+                    <p class="descricao-produto">Nutrição completa para o seu pet.</p>
+                    <span class="preco-produto">R$ 99,90</span>
+                    <button class="btn-comprar">Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoovb-7RVNMUzLECek-6OWEiYPu38x_RzF-w&s" alt="Produto 2">
+                    <h3 class="nome-produto">Brinquedo Interativo</h3>
+                    <p class="descricao-produto">Diversão garantida para o seu pet.</p>
+                    <span class="preco-produto">R$ 49,90</span>
+                    <button class="btn-comprar">Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhimDVewB9M7P6YF7DEgBx9ffQcf0hD2glCg&s" alt="Produto 3">
+                    <h3 class="nome-produto">Cama Confortável</h3>
+                    <p class="descricao-produto">O descanso que seu pet merece.</p>
+                    <span class="preco-produto">R$ 129,90</span>
+                    <button class="btn-comprar">Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_PytKlDlzJcbCVKVQAxV4aaTCO0EgsjH8Nw&s" alt="Produto 4">
+                    <h3 class="nome-produto">Coleira Estilosa</h3>
+                    <p class="descricao-produto">Segurança e estilo para o seu pet.</p>
+                    <span class="preco-produto">R$ 39,90</span>
+                    <button class="btn-comprar">Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto">
+                    <img src="https://d25qvdyh5ydvzo.cloudfront.net/rudjyplob8ua3n4dig8isu2jjsk8" alt="Produto 5">
+                    <h3 class="nome-produto">Shampoo Natural</h3>
+                    <p class="descricao-produto">Cuidados especiais para a pele do seu pet.</p>
+                    <span class="preco-produto">R$ 29,90</span>
+                    <button class="btn-comprar">Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHeKQmxcYewA-jC3RDSqBWnEYmz6HBuJEXkQ&s" alt="Produto 6">
+                    <h3 class="nome-produto">Petiscos Saudáveis</h3>
+                    <p class="descricao-produto">Delícias que seu pet vai adorar.</p>
+                    <span class="preco-produto">R$ 19,90</span>
+                    <button class="btn-comprar">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="sessao-servicos">
+            <h2 class="titulo-secao">Nossos Serviços</h2>
+            <div class="lista-servicos">
+                <div class="servico">
+                    <h3 class="nome-servico">Banho e Tosa</h3>
+                    <p class="descricao-servico">Deixe seu pet limpo e estiloso com nossos serviços de banho e tosa.</p>
+                    <span class="preco-servico">R$ 79,90</span>
+                    <button class="btn-contratar" data-servico="Banho e Tosa" data-preco="79.90">Contratar Serviço</button>
+                </div>
+                <div class="servico">
+                    <h3 class="nome-servico">Consulta Veterinária</h3>
+                    <p class="descricao-servico">Cuidamos da saúde do seu pet com consultas especializadas.</p>
+                    <span class="preco-servico">R$ 149,90</span>
+                    <button class="btn-contratar" data-servico="Consulta Veterinaria" data-preco="149.90">Contratar Serviço</button>
+                </div>
+                <div class="servico">
+                    <h3 class="nome-servico">Adestramento</h3>
+                    <p class="descricao-servico">Treinamento profissional para o bom comportamento do seu pet.</p>
+                    <span class="preco-servico">R$ 59,90</span>
+                    <button class="btn-contratar" data-servico="Adestramento" data-preco="59.90">Contratar Serviço</button>
+                </div>
+                <div class="servico">
+                    <h3 class="nome-servico">Hospedagem</h3>
+                    <p class="descricao-servico">Um lar temporário cheio de carinho para o seu pet.</p>
+                    <span class="preco-servico">R$ 29,90</span>
+                    <button class="btn-contratar" data-servico="Hospedagem" data-preco="29.90">Contratar Serviço</button>
+                </div>
+                <div class="servico">
+                    <h3 class="nome-servico">Entrega em Domicílio</h3>
+                    <p class="descricao-servico">Receba nossos produtos e serviços no conforto da sua casa.</p>
+                    <span class="preco-servico">R$ 15,90</span>
+                    <button class="btn-contratar" data-servico="Entrega em Domicílio" data-preco="15.90">Contratar Serviço</button>
+                </div>
+                <div class="servico">
+                    <h3 class="nome-servico">Consultoria Nutricional</h3>
+                    <p class="descricao-servico">Orientação especializada para a alimentação do seu pet.</p>
+                    <span class="preco-servico">R$ 75,90</span>
+                    <button class="btn-contratar" data-servico="Consultoria Nutricional" data-preco="75.90">Contratar Serviço</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="carrinho" class="carrinho">
+        <h3>Carrinho</h3>
+        <div class="itens-carrinho">
+            <!-- Itens adicionados ao carrinho aparecerão aqui -->
+        </div>
+        <button class="btn-finalizar">Finalizar Compra</button>
+    </div>
+
+    <div class="rodape-container">
+        <nav class="bar-nav">
+            <ul>
+                <li><a href="">WhatsApp</a></li>
+                <li><a href="">Instagram</a></li>
+                <li><a href="">Facebook</a></li>
+            </ul>
+        </nav>
+
+        <footer class="rodape">
+            <p>© 2024 Mundo Pet. Todos os direitos reservados.</p>
+            <div class="marcas-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJuoGQ1MFR24E1hlvOQoWDMhB27NJJNoUq1A&s" alt="Premier Pet">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVv9krV6vecEIhaOOm5CGj7wd6QUj81hmtCg&s" alt="Zee.Dog">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVucKdL1ThOsj_NNojKZzL1vtIjLWtP80wDA&s" alt="Pet Society">
+            </div>
+        </footer>
+    </div>
+
+    <!-- Script externo -->
+    <script src="script.js"></script>
+</body>
+</html>

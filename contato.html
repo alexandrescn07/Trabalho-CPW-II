@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com o Pet Shop de Coxim para dúvidas, sugestões ou agendamentos.">
+    <title>Contato</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagem/icon2.jpeg">
+</head>
+<body>
+    <header>
+        <h1 class="contact-title">Contato do PetShop</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Envie uma Mensagem</h2>
+        <form id="contact-form">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="response-message"></p>
+    </main>
+    
+    <div class="footer">
+        <p>&copy; 2024 PetShop de Coxim. Todos os direitos reservados.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
