@@ -1,0 +1,461 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #fff9f3;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Cabeçalho: centralizado, com padding e borda de destaque */
+.cabecalho {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffebd4;
+    border-bottom: 3px solid #ffb56b;
+}
+
+.titulo {
+    /* Título principal: grande e em tom quente */
+    font-size: 3rem;
+    color: #ff7a00;
+    margin-bottom: 5px;
+}
+.sub-titulo {
+    /* Subtítulo mais leve */
+    font-size: 1.3rem;
+    color: #444;
+}
+
+.edit-cabecalho {
+    /* Ajuste extra abaixo do cabeçalho */
+    margin-top: 25px;
+}
+
+.nav-bar ul {
+    /* Barra de navegação: lista horizontal com espaçamento */
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-bar a {
+    /* Links da nav: limpos e com leve transição */
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-bar a:hover {
+    color: #ff7a00;
+    text-decoration: underline;
+}
+
+.sessao-inicio {
+    /* Hero/boas-vindas: espaço generoso e fundo suave */
+    padding: 60px 20px;
+    text-align: center;
+    background: #ffe9d6;
+}
+
+.titulo-secao {
+    /* Títulos de seção: consistentes e com cor do tema */
+    font-size: 2rem;
+    color: #ff7a00;
+}
+
+.descricao-secao {
+    /* Texto de apoio para seções */
+    font-size: 1.1rem;
+    margin: 15px 0 25px;
+    color: #444;
+}
+
+.botao {
+    /* Botão principal (link estilizado) */
+    background: #ff7a00;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.botao:hover {
+    background: #e96900;
+}
+
+.sessao-produtos {
+    /* Produtos: seção clara com layout em grid */
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.lista-produtos {
+    /* Grid responsivo de cards de produto */
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.produto {
+    /* Card de produto: leve sombra e cantos arredondados */
+    background: #fff7ef;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+}
+
+.produto img {
+    /* Imagem do card: cobre a área e mantém proporção */
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.nome-produto {
+    /* Nome do produto em destaque */
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #ff7a00;
+}
+
+.descricao-produto {
+    /* Pequena descrição do produto */
+    margin: 10px 0;
+}
+
+.preco-produto {
+    /* Preço em destaque */
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.sessao-servicos {
+    /* Serviços: bloco com leve variação de fundo */
+    padding: 60px 20px;
+    background-color: #fff6ea;
+    text-align: center;
+}
+
+.lista-servicos {
+    /* Grid de serviços similar aos produtos */
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.servico {
+    /* Card de serviço: simples e limpo */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.servico:hover {
+    transform: scale(1.02);
+}
+
+.nome-servico {
+    /* Título do serviço */
+    font-size: 1.3rem;
+    color: #ff7a00;
+    margin-bottom: 10px;
+}
+
+.rodape-container {
+    /* Rodapé: área de contatos e marcas */
+    margin-top: 60px;
+    background-color: #ffebd4;
+    padding: 30px 20px;
+    border-top: 3px solid #ffb56b;
+}
+
+.bar-nav ul {
+    /* Links do rodapé em linha */
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.bar-nav a {
+    /* Estilo dos links do rodapé */
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    transition: 0.3s;
+}
+
+.bar-nav a:hover {
+    color: #ff7a00;
+}
+
+.rodape {
+    /* Texto de copyright */
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.marcas-container {
+    /* Logos de parceiros */
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.marcas-container img {
+    height: 45px;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.marcas-container img:hover {
+    filter: brightness(1);
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 600px) {
+    .titulo {
+        font-size: 2.3rem;
+    }
+
+    .nav-bar ul {
+        gap: 20px;
+    }
+
+    .produto img {
+        height: 150px;
+    }
+
+    .marcas-container img {
+        height: 35px;
+    }
+}
+
+/* Botões: estilo base e variações */
+button {
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-comprar {
+    background-color: #ff7a00;
+    color: white;
+    width: 100%;
+    margin-top: 10px;
+}
+.btn-comprar:hover {
+    background-color: #e96900;
+}
+
+.btn-contratar {
+    background-color: #ffa940;
+    color: #fff;
+    width: 100%;
+    margin-top: 15px;
+}
+.btn-contratar:hover {
+    background-color: #ff8c00;
+}
+
+/* Carrinho: caixa fixa no canto inferior direito */
+.carrinho {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 260px;
+    background: #fff;
+    border: 2px solid #ffb56b;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    padding: 15px;
+    z-index: 999;
+}
+
+.carrinho h3 {
+    text-align: center;
+    color: #ff7a00;
+}
+
+.itens-carrinho {
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 10px 5px;
+}
+
+.btn-finalizar {
+    background-color: #ff7a00;
+    color: #fff;
+    width: 100%;
+    margin-top: 10px;
+}
+.btn-finalizar:hover {
+    background-color: #e96900;
+}
+
+#carrinho {
+    transition: 0.3s;
+    max-height: 45px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#carrinho.ativo {
+    max-height: 400px;
+}
+
+/* Efeitos e utilitários: pulse, toast e popups */
+.pulse {
+    animation: pulseAnim 0.3s;
+}
+@keyframes pulseAnim {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+    100% { transform: scale(1); }
+}
+
+.toast {
+    position: fixed;
+    right: 20px;
+    bottom: -60px;
+    opacity: 0;
+    background: #ff7a00;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 9999;
+}
+.toast.show {
+    bottom: 30px;
+    opacity: 1;
+}
+
+.popup-fundo {
+    /* Fundo escuro para modal */
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.popup-box {
+    /* Caixa do popup */
+    width: 300px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.popup-box h3 {
+    margin-bottom: 10px;
+}
+
+.popup-botoes {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup-botoes button {
+    width: 48%;
+    background: #ff7a00;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.popup-botoes button:hover {
+    background: #dd6800;
+}
+
+.item-carrinho {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.item-carrinho button {
+    /* Botão de remover item */
+    background: red;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Estilos para a Seção de Localização */
+.sessao-localizacao {
+    padding: 60px 20px;
+    background-color: #fff; /* Fundo branco ou claro, para contraste */
+    text-align: center;
+}
+
+.info-local {
+    max-width: 900px;
+    margin: 40px auto 0;
+    padding: 30px;
+    border: 1px solid #ffb56b;
+    border-radius: 12px;
+    background-color: #fff7ef; /* Cor de fundo suave */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.contato-detalhes {
+    margin: 20px 0 30px;
+    text-align: left;
+    padding: 0 10px;
+    line-height: 1.8;
+    font-size: 1.1em;
+}
+
+.contato-detalhes strong {
+    color: #ff7a00;
+    font-weight: 700;
+}
+
+.mapa-container {
+    margin-top: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.mapa-container iframe {
+    display: block;
+}
